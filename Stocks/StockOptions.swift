@@ -8,57 +8,60 @@
 import Foundation
 import SwiftUI
 
-enum StockOptions {
+enum StockOptions: DiceType {
     case grain, oil, gold, silver, bonds, industrial
-}
-
-func stockTitle(stock: StockOptions) -> String {
-    switch stock {
-    case .grain:
-        return "Grain"
-    case .oil:
-        return "Oil"
-    case .gold:
-        return "Gold"
-    case .silver:
-        return "Silver"
-    case .bonds:
-        return "Bonds"
-    case .industrial:
-        return "Industry"
+    
+    func getOptions() -> [DiceType] {
+        return [StockOptions.grain, StockOptions.oil, StockOptions.gold, StockOptions.silver, StockOptions.bonds, StockOptions.industrial]
     }
-}
-
-func stockImage(stock: StockOptions) -> String {
-    switch stock {
-    case .grain:
-        return "leaf.fill"
-    case .oil:
-        return "drop.fill"
-    case .gold:
-        return "rectangle.roundedtop.fill"
-    case .silver:
-        return "bitcoinsign.circle.fill"
-    case .bonds:
-        return "scroll.fill"
-    case .industrial:
-        return "hammer.fill"
+    
+    func title() -> String {
+        switch self {
+        case .grain:
+            return "Grain"
+        case .oil:
+            return "Oil"
+        case .gold:
+            return "Gold"
+        case .silver:
+            return "Silver"
+        case .bonds:
+            return "Bonds"
+        case .industrial:
+            return "Industry"
+        }
     }
-}
-
-func stockColor(stock: StockOptions) -> Color {
-    switch stock {
-    case .grain:
-        return .green
-    case .oil:
-        return Color(UIColor.systemIndigo)
-    case .gold:
-        return .yellow
-    case .silver:
-        return .gray
-    case .bonds:
-        return .red
-    case .industrial:
-        return .purple
+    
+    func image() -> String {
+        switch self {
+        case .grain:
+            return "leaf.fill"
+        case .oil:
+            return "drop.fill"
+        case .gold:
+            return "rectangle.roundedtop.fill"
+        case .silver:
+            return "bitcoinsign.circle.fill"
+        case .bonds:
+            return "scroll.fill"
+        case .industrial:
+            return "hammer.fill"
+        }
+    }
+    func color() -> Color {
+        switch self {
+        case .grain:
+            return .green
+        case .oil:
+            return Color(UIColor.systemIndigo)
+        case .gold:
+            return .yellow
+        case .silver:
+            return .gray
+        case .bonds:
+            return .red
+        case .industrial:
+            return .purple
+        }
     }
 }

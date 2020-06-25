@@ -14,12 +14,11 @@ struct StockView: View {
     var body: some View {
         HStack {
             Spacer()
-            Image(systemName: stockImage(stock: stock))
+            Image(systemName: stock.image())
                 .frame(width: 0)
                 .font(.system(size: 40))
             VStack {
-                Text(stockTitle(stock: stock))
-                    .allowsTightening(true)
+                Text(stock.title())
                 Text("\(game.stockPrice(stock: stock)) ¢")
             }
             //.font(.system(size: 40))
@@ -27,7 +26,7 @@ struct StockView: View {
         }
         .padding(.top, 10)
         .padding(.bottom, 10)
-        .background(stockColor(stock: stock))
+        .background(stock.color())
         .foregroundColor(.black)
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameView: View {
     @ObservedObject var game: Game
+    let stockDie = Dice(sides: StockOptions.grain.getOptions())
     
     var body: some View {
         VStack {
