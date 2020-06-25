@@ -7,15 +7,24 @@
 
 import Foundation
 
-class Player {
+struct Player: Hashable {
+    
     var name: String
-    var stocks = [StockOptions.grain: 0, .oil: 0, .gold: 0, .silver: 0, .bonds: 0, .industrial: 0]
+    var stocks: [PlayerStock]
+    let stockTitles = [StockOptions.grain: "Grain", .oil: "Oil", .gold: "Gold", .silver: "Silver", .bonds: "Bonds", .industrial: "Industrial"]
     
     init(name: String) {
         self.name = name
+        self.stocks = [PlayerStock(stock: .grain), PlayerStock(stock: .oil), PlayerStock(stock: .gold), PlayerStock(stock: .silver), PlayerStock(stock: .bonds), PlayerStock(stock: .industrial)]
     }
 }
 
-enum StockOptions {
-    case grain, oil, gold, silver, bonds, industrial
+struct PlayerStock: Hashable {
+    var type: StockOptions
+    var amount: Int
+    
+    init(stock: StockOptions) {
+        type = stock
+        amount = 50
+    }
 }

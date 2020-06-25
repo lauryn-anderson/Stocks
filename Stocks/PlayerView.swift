@@ -11,12 +11,24 @@ struct PlayerView: View {
     @State var player: Player
     
     var body: some View {
-        VStack {
-            Text(player.name)
-            Label() {
-                Text("Grain")
-            } icon: {
-                Image(systemName: "drop")
+        List {
+            HStack {
+                Spacer()
+                Text(player.name)
+                    .font(.system(size: 60))
+                    .multilineTextAlignment(.center)
+                Spacer()
+            }
+            ForEach(player.stocks, id: \.self) { stock in
+                HStack {
+                    Spacer()
+                    Image(systemName: stockImage(stock: stock.type))
+                        .frame(width: 50, height: 70)
+                        .foregroundColor(stockColor(stock: stock.type))
+                    Text("\(stock.amount)")
+                    Spacer()
+                }
+                .font(.system(size: 50))
             }
         }
     }

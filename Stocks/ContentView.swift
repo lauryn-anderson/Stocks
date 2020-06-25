@@ -7,13 +7,25 @@
 
 import SwiftUI
 
+let players = [Player(name: "Lauryn"), Player(name: "Sophie")]
+
 struct ContentView: View {
     var body: some View {
-        HStack {
-            Text("Hello, world!").padding()
-            Image(systemName: "heart")
+        VStack {
+            HStack {
+                Text("Stocks!").padding()
+                Image(systemName: "dollarsign.circle.fill")
+            }
+            .font(.system(size: 60))
+            HStack {
+                Spacer()
+                ForEach(players, id: \.self) { player in
+                    PlayerView(player: player)
+                }
+                .multilineTextAlignment(.center)
+                Spacer()
+            }
         }
-        .font(.system(size: 60))
     }
 }
 
