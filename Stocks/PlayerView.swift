@@ -23,7 +23,7 @@ struct PlayerView: View {
                 HStack {
                     Spacer()
                     Image(systemName: stockImage(stock: stock.type))
-                        .frame(width: 50, height: 70)
+                        .frame(width: 20, height: 50)
                         .foregroundColor(stockColor(stock: stock.type))
                     Text("\(stock.amount)")
                     Spacer()

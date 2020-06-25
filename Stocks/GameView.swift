@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  GameView.swift
 //  Stocks
 //
 //  Created by Lauryn Anderson on 2020-06-24.
@@ -7,19 +7,20 @@
 
 import SwiftUI
 
-let players = [Player(name: "Lauryn"), Player(name: "Sophie")]
-
-struct ContentView: View {
+struct GameView: View {
+    @ObservedObject var game: Game
+    
     var body: some View {
         VStack {
+            
             HStack {
-                Text("Stocks!").padding()
-                Image(systemName: "dollarsign.circle.fill")
+                ForEach(game.stocks, id: \.self) { stock in
+                    StockView(stock: stock, game: game)
+                }
             }
-            .font(.system(size: 60))
             HStack {
                 Spacer()
-                ForEach(players, id: \.self) { player in
+                ForEach(game.players, id: \.self) { player in
                     PlayerView(player: player)
                 }
                 .multilineTextAlignment(.center)
@@ -29,8 +30,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        GameView(game: Game())
     }
 }

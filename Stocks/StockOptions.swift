@@ -25,7 +25,7 @@ func stockTitle(stock: StockOptions) -> String {
     case .bonds:
         return "Bonds"
     case .industrial:
-        return "Industrial"
+        return "Industry"
     }
 }
 
@@ -51,7 +51,7 @@ func stockColor(stock: StockOptions) -> Color {
     case .grain:
         return .green
     case .oil:
-        return .blue
+        return Color(UIColor.systemIndigo)
     case .gold:
         return .yellow
     case .silver:

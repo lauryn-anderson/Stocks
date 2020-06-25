@@ -8,24 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		1438702B24A3D3AC0047AA4F /* StocksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438702A24A3D3AC0047AA4F /* StocksApp.swift */; };
-		1438702D24A3D3AC0047AA4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438702C24A3D3AC0047AA4F /* ContentView.swift */; };
+		1438702D24A3D3AC0047AA4F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438702C24A3D3AC0047AA4F /* GameView.swift */; };
 		1438702F24A3D3AE0047AA4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1438702E24A3D3AE0047AA4F /* Assets.xcassets */; };
 		1438703224A3D3AE0047AA4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1438703124A3D3AE0047AA4F /* Preview Assets.xcassets */; };
 		1438703A24A3E3F40047AA4F /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438703924A3E3F30047AA4F /* PlayerView.swift */; };
 		1438703C24A3E5240047AA4F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438703B24A3E5240047AA4F /* Player.swift */; };
 		14DF2B2924A4475D005D1A33 /* StockOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF2B2824A4475D005D1A33 /* StockOptions.swift */; };
+		14DF2B2B24A5199C005D1A33 /* StockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF2B2A24A5199C005D1A33 /* StockView.swift */; };
+		14DF2B2D24A51A57005D1A33 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF2B2C24A51A57005D1A33 /* Game.swift */; };
+		14DF2B2F24A54D17005D1A33 /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF2B2E24A54D17005D1A33 /* Dice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1438702724A3D3AC0047AA4F /* Stocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1438702A24A3D3AC0047AA4F /* StocksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksApp.swift; sourceTree = "<group>"; };
-		1438702C24A3D3AC0047AA4F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1438702C24A3D3AC0047AA4F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		1438702E24A3D3AE0047AA4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1438703124A3D3AE0047AA4F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1438703324A3D3AE0047AA4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1438703924A3E3F30047AA4F /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		1438703B24A3E5240047AA4F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		14DF2B2824A4475D005D1A33 /* StockOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockOptions.swift; sourceTree = "<group>"; };
+		14DF2B2A24A5199C005D1A33 /* StockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockView.swift; sourceTree = "<group>"; };
+		14DF2B2C24A51A57005D1A33 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		14DF2B2E24A54D17005D1A33 /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +65,13 @@
 			isa = PBXGroup;
 			children = (
 				1438702A24A3D3AC0047AA4F /* StocksApp.swift */,
-				1438702C24A3D3AC0047AA4F /* ContentView.swift */,
+				1438702C24A3D3AC0047AA4F /* GameView.swift */,
 				1438703924A3E3F30047AA4F /* PlayerView.swift */,
+				14DF2B2A24A5199C005D1A33 /* StockView.swift */,
 				1438703B24A3E5240047AA4F /* Player.swift */,
+				14DF2B2C24A51A57005D1A33 /* Game.swift */,
 				14DF2B2824A4475D005D1A33 /* StockOptions.swift */,
+				14DF2B2E24A54D17005D1A33 /* Dice.swift */,
 				1438702E24A3D3AE0047AA4F /* Assets.xcassets */,
 				1438703324A3D3AE0047AA4F /* Info.plist */,
 				1438703024A3D3AE0047AA4F /* Preview Content */,
@@ -149,8 +158,11 @@
 			files = (
 				1438703C24A3E5240047AA4F /* Player.swift in Sources */,
 				1438703A24A3E3F40047AA4F /* PlayerView.swift in Sources */,
+				14DF2B2F24A54D17005D1A33 /* Dice.swift in Sources */,
+				14DF2B2D24A51A57005D1A33 /* Game.swift in Sources */,
 				14DF2B2924A4475D005D1A33 /* StockOptions.swift in Sources */,
-				1438702D24A3D3AC0047AA4F /* ContentView.swift in Sources */,
+				14DF2B2B24A5199C005D1A33 /* StockView.swift in Sources */,
+				1438702D24A3D3AC0047AA4F /* GameView.swift in Sources */,
 				1438702B24A3D3AC0047AA4F /* StocksApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
