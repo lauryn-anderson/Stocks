@@ -9,13 +9,13 @@ import Foundation
 
 class Player {
     var name: String
-    var stocks = [Stocks.grain: 0, .oil: 0, .gold: 0, .silver: 0, .bonds: 0, .industrial: 0]
+    var stocks = [StockOptions.grain: 0, .oil: 0, .gold: 0, .silver: 0, .bonds: 0, .industrial: 0]
     
     init(name: String) {
         self.name = name
     }
 }
 
-enum Stocks {
+enum StockOptions {
     case grain, oil, gold, silver, bonds, industrial
 }
