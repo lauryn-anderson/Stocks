@@ -10,18 +10,19 @@ import SwiftUI
 
 struct Dice {
     var sides: [DiceType]
-    var currentSide
+    var currentSide: DiceType
     mutating func roll() {
         currentSide = sides[Int.random(in: 0...sides.count-1)]
     }
     
-    init(type: DiceType.Type) {
-        sides = type.allCases
+    init<T: CaseIterable>(type: T) {
+        sides = T.allCases as! [DiceType]
+        currentSide = sides[0]
+        roll()
     }
 }
 
-protocol DiceType: CaseIterable {
-    func getOptions() -> [DiceType]
+protocol DiceType {
     func title() -> String
     func image() -> String
     func color() -> Color

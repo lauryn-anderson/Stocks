@@ -9,11 +9,20 @@ import SwiftUI
 
 struct GameView: View {
     @ObservedObject var game: Game
-    let stockDie = Dice(sides: StockOptions.grain.getOptions())
+    @State var stockDie = Dice(type: StockOptions.gold)
+    @State var amountDie = Dice(type: AmountOptions.five)
+    @State var changeDie = Dice(type: ChangeOptions.up)
     
     var body: some View {
         VStack {
-            
+            HStack {
+                Text("Stocks")
+                    .font(.title)
+                Spacer()
+                DiceView(side: $stockDie.currentSide)
+                DiceView(side: $amountDie.currentSide)
+                DiceView(side: $changeDie.currentSide)
+            }
             HStack {
                 ForEach(game.stocks, id: \.self) { stock in
                     StockView(stock: stock, game: game)

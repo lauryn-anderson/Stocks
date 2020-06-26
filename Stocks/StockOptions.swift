@@ -8,12 +8,8 @@
 import Foundation
 import SwiftUI
 
-enum StockOptions: DiceType {
+enum StockOptions: DiceType, CaseIterable {
     case grain, oil, gold, silver, bonds, industrial
-    
-    func getOptions() -> [DiceType] {
-        return [StockOptions.grain, StockOptions.oil, StockOptions.gold, StockOptions.silver, StockOptions.bonds, StockOptions.industrial]
-    }
     
     func title() -> String {
         switch self {
