@@ -10,10 +10,13 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         HStack {
-            Text("Hello, world!").padding()
-            Image(systemName: "heart")
+            Image("goldFilled")
+                .foregroundColor(.pink)
+                .frame(width: 200, height: 300, alignment: .center)
+                .scaleEffect(x: 0.5, y: 0.5, anchor: .center)
         }
-        .font(.system(size: 60))
+        .background(Color.blue)
+        .font(.title)
     }
 }
 
