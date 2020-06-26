@@ -8,10 +8,10 @@
 import Foundation
 import SwiftUI
 
-class Dice: ObservableObject {
+struct Dice {
     var sides: [DiceType]
-    @Published var currentSide: DiceType
-    func roll() {
+    var currentSide: DiceType
+    mutating func roll() {
         currentSide = sides[Int.random(in: 0...sides.count-1)]
     }
     
