@@ -22,8 +22,8 @@ struct Dice {
     }
 }
 
-protocol DiceType {
-    func title() -> String
-    func image() -> String
-    func color() -> Color
+protocol DiceType: CustomStringConvertible {
+    var description:  String { get }
+    var image: String { get }
+    var color: Color { get }
 }

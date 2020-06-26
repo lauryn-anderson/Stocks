@@ -11,7 +11,7 @@ import SwiftUI
 enum AmountOptions: DiceType, CaseIterable {
     case five, ten, twenty
     
-    func title() -> String {
+    var description: String {
         switch self {
         case .five:
             return "Five"
@@ -22,7 +22,7 @@ enum AmountOptions: DiceType, CaseIterable {
         }
     }
     
-    func image() -> String {
+    var image: String {
         switch self {
         case .five:
             return "5.circle"
@@ -32,7 +32,7 @@ enum AmountOptions: DiceType, CaseIterable {
             return "20.circle"
         }
     }
-    func color() -> Color {
+    var color: Color {
         return Color(UIColor.systemTeal)
     }
 }
