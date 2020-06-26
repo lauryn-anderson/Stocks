@@ -9,9 +9,9 @@ import SwiftUI
 
 struct GameView: View {
     @ObservedObject var game: Game
-    @State var stockDie = Dice(type: StockType.gold)
-    @State var amountDie = Dice(type: AmountOptions.five)
-    @State var changeDie = Dice(type: ChangeOptions.up)
+    @ObservedObject var stockDie = Dice(type: StockType.gold)
+    @ObservedObject var amountDie = Dice(type: AmountOptions.five)
+    @ObservedObject var changeDie = Dice(type: ChangeOptions.up)
     
     var body: some View {
         VStack {
@@ -22,19 +22,20 @@ struct GameView: View {
                 DiceView(side: $stockDie.currentSide)
                 DiceView(side: $amountDie.currentSide)
                 DiceView(side: $changeDie.currentSide)
+                RollButtonView()//stockDie: $stockDie, amountDie: $amountDie, changeDie: $changeDie)
             }
             HStack {
                 ForEach(game.stocks, id: \.self) { stock in
                     StockView(stock: stock, game: game)
                 }
             }
-            HStack {
-                Spacer()
+            HStack(spacing: 20) {
+                Spacer(minLength: 0)
                 ForEach(game.players, id: \.self) { player in
-                    PlayerView(player: player)
+                    PlayerView(player: player, game: game)
                 }
                 .multilineTextAlignment(.center)
-                Spacer()
+                Spacer(minLength: 0)
             }
         }
     }
