@@ -23,7 +23,6 @@ struct PlayerView: View {
                 HStack {
                     Spacer()
                     imageFor(stock.type)
-                        //.resizable()
                         .renderingMode(.template)
                         .frame(width: 70, height: 70)
                         .foregroundColor(stock.type.color)
@@ -37,12 +36,10 @@ struct PlayerView: View {
     
     func imageFor(_ type: StockType) -> Image {
         if type.image.isSystem {
-            let image = Image(systemName: type.image.name)
-            return image
+            return Image(systemName: type.image.name)
         } else {
             return Image(type.image.name)
                 .resizable()
-
         }
     }
 }
