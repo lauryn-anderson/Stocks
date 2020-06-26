@@ -20,6 +20,7 @@
 		14DF2B3124A55BCE005D1A33 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF2B3024A55BCE005D1A33 /* DiceView.swift */; };
 		14DF2B3324A56EF7005D1A33 /* AmountOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF2B3224A56EF7005D1A33 /* AmountOptions.swift */; };
 		14DF2B3524A571CE005D1A33 /* ChangeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF2B3424A571CE005D1A33 /* ChangeOptions.swift */; };
+		14F7C29424A6815B00A8AD63 /* RollButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F7C29324A6815A00A8AD63 /* RollButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		14DF2B3024A55BCE005D1A33 /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
 		14DF2B3224A56EF7005D1A33 /* AmountOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountOptions.swift; sourceTree = "<group>"; };
 		14DF2B3424A571CE005D1A33 /* ChangeOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeOptions.swift; sourceTree = "<group>"; };
+		14F7C29324A6815A00A8AD63 /* RollButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				1438702C24A3D3AC0047AA4F /* GameView.swift */,
+				14F7C29324A6815A00A8AD63 /* RollButtonView.swift */,
 				1438702A24A3D3AC0047AA4F /* StocksApp.swift */,
 				1438703924A3E3F30047AA4F /* PlayerView.swift */,
 				14DF2B2A24A5199C005D1A33 /* StockView.swift */,
@@ -192,6 +195,7 @@
 				1438703C24A3E5240047AA4F /* Player.swift in Sources */,
 				14DF2B3124A55BCE005D1A33 /* DiceView.swift in Sources */,
 				1438703A24A3E3F40047AA4F /* PlayerView.swift in Sources */,
+				14F7C29424A6815B00A8AD63 /* RollButtonView.swift in Sources */,
 				14DF2B2F24A54D17005D1A33 /* Dice.swift in Sources */,
 				14DF2B2D24A51A57005D1A33 /* Game.swift in Sources */,
 				14DF2B2924A4475D005D1A33 /* StockType.swift in Sources */,

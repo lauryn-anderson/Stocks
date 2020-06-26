@@ -22,19 +22,20 @@ struct GameView: View {
                 DiceView(side: $stockDie.currentSide)
                 DiceView(side: $amountDie.currentSide)
                 DiceView(side: $changeDie.currentSide)
+                RollButtonView()//stockDie: $stockDie, amountDie: $amountDie, changeDie: $changeDie)
             }
             HStack {
                 ForEach(game.stocks, id: \.self) { stock in
                     StockView(stock: stock, game: game)
                 }
             }
-            HStack {
-                Spacer()
+            HStack(spacing: 20) {
+                Spacer(minLength: 0)
                 ForEach(game.players, id: \.self) { player in
-                    PlayerView(player: player)
+                    PlayerView(player: player, game: game)
                 }
                 .multilineTextAlignment(.center)
-                Spacer()
+                Spacer(minLength: 0)
             }
         }
     }

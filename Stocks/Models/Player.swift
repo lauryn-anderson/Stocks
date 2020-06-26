@@ -12,6 +12,7 @@ struct Player: Hashable {
     var name: String
     var stocks: [PlayerStock]
     let stockTitles: [StockType: String] = [.grain: "Grain", .oil: "Oil", .gold: "Gold", .silver: "Silver", .bonds: "Bonds", .industrial: "Industrial"]
+    var money = 5000
     
     init(name: String) {
         self.name = name
@@ -25,6 +26,6 @@ struct PlayerStock: Hashable {
     
     init(stock: StockType) {
         type = stock
-        amount = 50
+        amount = 100 // number of that stock owned by this player
     }
 }
