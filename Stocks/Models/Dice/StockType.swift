@@ -33,17 +33,35 @@ enum StockType: DiceType, CaseIterable {
         case .grain:
             return ("grain", false)
         case .oil:
+            return ("drop", true)
+        case .gold:
+            return ("gold", false)
+        case .silver:
+            return ("silver", false)
+        case .bonds:
+            return ("scroll", true)
+        case .industrial:
+            return ("hammer", true)
+        }
+    }
+    
+    var imageFill: (name: String, isSystem: Bool) {
+        switch self {
+        case .grain:
+            return ("grain.fill", false)
+        case .oil:
             return ("drop.fill", true)
         case .gold:
-            return ("rectangle.roundedtop.fill", true)
+            return ("gold.fill", false)
         case .silver:
-            return ("bitcoinsign.circle.fill", true)
+            return ("silver.fill", false)
         case .bonds:
             return ("scroll.fill", true)
         case .industrial:
             return ("hammer.fill", true)
         }
     }
+    
     var color: Color {
         switch self {
         case .grain:

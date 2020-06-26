@@ -32,6 +32,11 @@ enum AmountOptions: DiceType, CaseIterable {
             return ("20.circle", true)
         }
     }
+    
+    var imageFill: (name: String, isSystem: Bool) {
+        return image
+    }
+    
     var color: Color {
         return Color(UIColor.systemTeal)
     }

@@ -35,10 +35,10 @@ struct PlayerView: View {
     }
     
     func imageFor(_ type: StockType) -> Image {
-        if type.image.isSystem {
-            return Image(systemName: type.image.name)
+        if type.imageFill.isSystem {
+            return Image(systemName: type.imageFill.name)
         } else {
-            return Image(type.image.name)
+            return Image(type.imageFill.name)
                 .resizable()
         }
     }

@@ -33,6 +33,11 @@ enum ChangeOptions: DiceType, CaseIterable {
             return ("dollarsign.circle", true)
         }
     }
+    
+    var imageFill: (name: String, isSystem: Bool) {
+        return image
+    }
+    
     var color: Color {
         switch self {
         case .up:
