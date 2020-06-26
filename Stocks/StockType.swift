@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum StockOptions: DiceType, CaseIterable {
+enum StockType: DiceType, CaseIterable {
     case grain, oil, gold, silver, bonds, industrial
     
     var description: String {
@@ -28,20 +28,20 @@ enum StockOptions: DiceType, CaseIterable {
         }
     }
     
-    var image: String {
+    var image: (name: String, isSystem: Bool) {
         switch self {
         case .grain:
-            return "leaf.fill"
+            return ("grain", false)
         case .oil:
-            return "drop.fill"
+            return ("drop.fill", true)
         case .gold:
-            return "rectangle.roundedtop.fill"
+            return ("rectangle.roundedtop.fill", true)
         case .silver:
-            return "bitcoinsign.circle.fill"
+            return ("bitcoinsign.circle.fill", true)
         case .bonds:
-            return "scroll.fill"
+            return ("scroll.fill", true)
         case .industrial:
-            return "hammer.fill"
+            return ("hammer.fill", true)
         }
     }
     var color: Color {

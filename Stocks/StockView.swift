@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct StockView: View {
-    let stock: StockOptions
+    let stock: StockType
     @ObservedObject var game: Game
     
     var body: some View {
         HStack {
             Spacer()
-            Image(systemName: stock.image)
+            Image(systemName: stock.image.name)
                 .frame(width: 0)
                 .font(.system(size: 40))
             VStack {

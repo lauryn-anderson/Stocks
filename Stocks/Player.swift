@@ -11,7 +11,7 @@ struct Player: Hashable {
     
     var name: String
     var stocks: [PlayerStock]
-    let stockTitles = [StockOptions.grain: "Grain", .oil: "Oil", .gold: "Gold", .silver: "Silver", .bonds: "Bonds", .industrial: "Industrial"]
+    let stockTitles: [StockType: String] = [.grain: "Grain", .oil: "Oil", .gold: "Gold", .silver: "Silver", .bonds: "Bonds", .industrial: "Industrial"]
     
     init(name: String) {
         self.name = name
@@ -20,10 +20,10 @@ struct Player: Hashable {
 }
 
 struct PlayerStock: Hashable {
-    var type: StockOptions
+    var type: StockType
     var amount: Int
     
-    init(stock: StockOptions) {
+    init(stock: StockType) {
         type = stock
         amount = 50
     }

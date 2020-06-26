@@ -22,14 +22,27 @@ struct PlayerView: View {
             ForEach(player.stocks, id: \.self) { stock in
                 HStack {
                     Spacer()
-                    Image(systemName: stock.type.image)
-                        .frame(width: 20, height: 50)
+                    imageFor(stock.type)
+                        //.resizable()
+                        .renderingMode(.template)
+                        .frame(width: 70, height: 70)
                         .foregroundColor(stock.type.color)
                     Text("\(stock.amount)")
                     Spacer()
                 }
                 .font(.system(size: 50))
             }
+        }
+    }
+    
+    func imageFor(_ type: StockType) -> Image {
+        if type.image.isSystem {
+            let image = Image(systemName: type.image.name)
+            return image
+        } else {
+            return Image(type.image.name)
+                .resizable()
+
         }
     }
 }

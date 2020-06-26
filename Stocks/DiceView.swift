@@ -12,7 +12,7 @@ struct DiceView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: side.image)
+            Image(systemName: side.image.name)
                 .font(.system(size: 50))
             Text(side.description)
         }

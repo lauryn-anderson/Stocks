@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GameView: View {
     @ObservedObject var game: Game
-    @State var stockDie = Dice(type: StockOptions.gold)
+    @State var stockDie = Dice(type: StockType.gold)
     @State var amountDie = Dice(type: AmountOptions.five)
     @State var changeDie = Dice(type: ChangeOptions.up)
     
