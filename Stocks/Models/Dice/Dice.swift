@@ -24,6 +24,7 @@ struct Dice {
 
 protocol DiceType: CustomStringConvertible {
     var description:  String { get }
-    var image: String { get }
+    var image: (name: String, isSystem: Bool) { get }
+    var imageFill: (name: String, isSystem: Bool) { get }
     var color: Color { get }
 }

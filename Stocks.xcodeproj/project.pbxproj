@@ -13,7 +13,7 @@
 		1438703224A3D3AE0047AA4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1438703124A3D3AE0047AA4F /* Preview Assets.xcassets */; };
 		1438703A24A3E3F40047AA4F /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438703924A3E3F30047AA4F /* PlayerView.swift */; };
 		1438703C24A3E5240047AA4F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438703B24A3E5240047AA4F /* Player.swift */; };
-		14DF2B2924A4475D005D1A33 /* StockOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF2B2824A4475D005D1A33 /* StockOptions.swift */; };
+		14DF2B2924A4475D005D1A33 /* StockType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF2B2824A4475D005D1A33 /* StockType.swift */; };
 		14DF2B2B24A5199C005D1A33 /* StockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF2B2A24A5199C005D1A33 /* StockView.swift */; };
 		14DF2B2D24A51A57005D1A33 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF2B2C24A51A57005D1A33 /* Game.swift */; };
 		14DF2B2F24A54D17005D1A33 /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DF2B2E24A54D17005D1A33 /* Dice.swift */; };
@@ -31,7 +31,7 @@
 		1438703324A3D3AE0047AA4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1438703924A3E3F30047AA4F /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		1438703B24A3E5240047AA4F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		14DF2B2824A4475D005D1A33 /* StockOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockOptions.swift; sourceTree = "<group>"; };
+		14DF2B2824A4475D005D1A33 /* StockType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockType.swift; sourceTree = "<group>"; };
 		14DF2B2A24A5199C005D1A33 /* StockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockView.swift; sourceTree = "<group>"; };
 		14DF2B2C24A51A57005D1A33 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		14DF2B2E24A54D17005D1A33 /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
@@ -70,17 +70,8 @@
 		1438702924A3D3AC0047AA4F /* Stocks */ = {
 			isa = PBXGroup;
 			children = (
-				1438702A24A3D3AC0047AA4F /* StocksApp.swift */,
-				1438702C24A3D3AC0047AA4F /* GameView.swift */,
-				14DF2B3224A56EF7005D1A33 /* AmountOptions.swift */,
-				1438703924A3E3F30047AA4F /* PlayerView.swift */,
-				14DF2B2A24A5199C005D1A33 /* StockView.swift */,
-				1438703B24A3E5240047AA4F /* Player.swift */,
-				14DF2B2C24A51A57005D1A33 /* Game.swift */,
-				14DF2B2824A4475D005D1A33 /* StockOptions.swift */,
-				14DF2B3424A571CE005D1A33 /* ChangeOptions.swift */,
-				14DF2B2E24A54D17005D1A33 /* Dice.swift */,
-				14DF2B3024A55BCE005D1A33 /* DiceView.swift */,
+				14F7C29024A5A6FF00A8AD63 /* Views */,
+				14F7C29124A5A72300A8AD63 /* Models */,
 				1438702E24A3D3AE0047AA4F /* Assets.xcassets */,
 				1438703324A3D3AE0047AA4F /* Info.plist */,
 				1438703024A3D3AE0047AA4F /* Preview Content */,
@@ -94,6 +85,39 @@
 				1438703124A3D3AE0047AA4F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		14F7C29024A5A6FF00A8AD63 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1438702C24A3D3AC0047AA4F /* GameView.swift */,
+				1438702A24A3D3AC0047AA4F /* StocksApp.swift */,
+				1438703924A3E3F30047AA4F /* PlayerView.swift */,
+				14DF2B2A24A5199C005D1A33 /* StockView.swift */,
+				14DF2B3024A55BCE005D1A33 /* DiceView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		14F7C29124A5A72300A8AD63 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				14F7C29224A5A74A00A8AD63 /* Dice */,
+				1438703B24A3E5240047AA4F /* Player.swift */,
+				14DF2B2C24A51A57005D1A33 /* Game.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		14F7C29224A5A74A00A8AD63 /* Dice */ = {
+			isa = PBXGroup;
+			children = (
+				14DF2B2E24A54D17005D1A33 /* Dice.swift */,
+				14DF2B2824A4475D005D1A33 /* StockType.swift */,
+				14DF2B3224A56EF7005D1A33 /* AmountOptions.swift */,
+				14DF2B3424A571CE005D1A33 /* ChangeOptions.swift */,
+			);
+			path = Dice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +194,7 @@
 				1438703A24A3E3F40047AA4F /* PlayerView.swift in Sources */,
 				14DF2B2F24A54D17005D1A33 /* Dice.swift in Sources */,
 				14DF2B2D24A51A57005D1A33 /* Game.swift in Sources */,
-				14DF2B2924A4475D005D1A33 /* StockOptions.swift in Sources */,
+				14DF2B2924A4475D005D1A33 /* StockType.swift in Sources */,
 				14DF2B2B24A5199C005D1A33 /* StockView.swift in Sources */,
 				1438702D24A3D3AC0047AA4F /* GameView.swift in Sources */,
 				14DF2B3524A571CE005D1A33 /* ChangeOptions.swift in Sources */,

@@ -12,8 +12,9 @@ struct DiceView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: side.image)
-                .font(.system(size: 50))
+            imageFor(side)
+                .font(.system(size: 60))
+                .frame(width: 65, height: 65)
             Text(side.description)
         }
         .foregroundColor(.black)
@@ -21,6 +22,15 @@ struct DiceView: View {
         .padding()
         .background(side.color)
         .cornerRadius(12)
+    }
+    
+    func imageFor(_ type: DiceType) -> Image {
+        if type.image.isSystem {
+            return Image(systemName: type.image.name)
+        } else {
+            return Image(type.image.name)
+                .resizable()
+        }
     }
 }
 

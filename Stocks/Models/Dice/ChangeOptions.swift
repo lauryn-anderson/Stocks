@@ -23,16 +23,21 @@ enum ChangeOptions: DiceType, CaseIterable {
         }
     }
     
-    var image: String {
+    var image: (name: String, isSystem: Bool) {
         switch self {
         case .up:
-            return "arrow.up.circle"
+            return ("arrow.up.circle", true)
         case .down:
-            return "arrow.down.circle"
+            return ("arrow.down.circle", true)
         case .dividend:
-            return "dollarsign.circle"
+            return ("dollarsign.circle", true)
         }
     }
+    
+    var imageFill: (name: String, isSystem: Bool) {
+        return image
+    }
+    
     var color: Color {
         switch self {
         case .up:

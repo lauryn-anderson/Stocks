@@ -15,10 +15,10 @@ class Game: ObservableObject {
     var bondsPrice = 100
     var industrialPrice = 100
     
-    let stocks = [StockOptions.grain, .oil, .gold, .silver, .bonds, .industrial]
+    let stocks: [StockType] = [.grain, .oil, .gold, .silver, .bonds, .industrial]
     let players = [Player(name: "Lauryn"), Player(name: "Sophie"), Player(name: "Rhys"), Player(name: "Erik")]
     
-    func stockPrice(stock: StockOptions) -> Int {
+    func stockPrice(stock: StockType) -> Int {
         switch stock {
         case .grain:
             return grainPrice

@@ -8,26 +8,34 @@
 import SwiftUI
 
 struct StockView: View {
-    let stock: StockOptions
+    let stock: StockType
     @ObservedObject var game: Game
     
     var body: some View {
-        HStack {
-            Spacer()
-            Image(systemName: stock.image)
-                .frame(width: 0)
+        HStack(spacing: 0) {
+            Spacer(minLength: 0)
+            imageFor(stock)
+                .frame(width: 50, height: 50)
                 .font(.system(size: 40))
             VStack {
                 Text(stock.description)
+                    .lineLimit(1)
                 Text("\(game.stockPrice(stock: stock)) ¢")
             }
-            //.font(.system(size: 40))
-            Spacer()
+            .padding()
+            Spacer(minLength: 0)
         }
-        .padding(.top, 10)
-        .padding(.bottom, 10)
         .background(stock.color)
         .foregroundColor(.black)
+    }
+    
+    func imageFor(_ type: StockType) -> Image {
+        if type.image.isSystem {
+            return Image(systemName: type.image.name)
+        } else {
+            return Image(type.image.name)
+                .resizable()
+        }
     }
 }
 

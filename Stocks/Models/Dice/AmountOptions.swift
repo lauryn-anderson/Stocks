@@ -22,16 +22,21 @@ enum AmountOptions: DiceType, CaseIterable {
         }
     }
     
-    var image: String {
+    var image: (name: String, isSystem: Bool) {
         switch self {
         case .five:
-            return "5.circle"
+            return ("5.circle", true)
         case .ten:
-            return "10.circle"
+            return ("10.circle", true)
         case .twenty:
-            return "20.circle"
+            return ("20.circle", true)
         }
     }
+    
+    var imageFill: (name: String, isSystem: Bool) {
+        return image
+    }
+    
     var color: Color {
         return Color(UIColor.systemTeal)
     }
