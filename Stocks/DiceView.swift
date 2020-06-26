@@ -12,14 +12,14 @@ struct DiceView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: side.image())
+            Image(systemName: side.image)
                 .font(.system(size: 50))
-            Text(side.title())
+            Text(side.description)
         }
         .foregroundColor(.black)
         .frame(width: 120, height: 120)
         .padding()
-        .background(side.color())
+        .background(side.color)
         .cornerRadius(12)
     }
 }

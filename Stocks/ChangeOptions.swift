@@ -9,9 +9,10 @@ import Foundation
 import SwiftUI
 
 enum ChangeOptions: DiceType, CaseIterable {
+    
     case up, down, dividend
     
-    func title() -> String {
+    var description: String {
         switch self {
         case .up:
             return "Up"
@@ -22,7 +23,7 @@ enum ChangeOptions: DiceType, CaseIterable {
         }
     }
     
-    func image() -> String {
+    var image: String {
         switch self {
         case .up:
             return "arrow.up.circle"
@@ -32,7 +33,7 @@ enum ChangeOptions: DiceType, CaseIterable {
             return "dollarsign.circle"
         }
     }
-    func color() -> Color {
+    var color: Color {
         switch self {
         case .up:
             return Color(.green)

@@ -22,9 +22,9 @@ struct PlayerView: View {
             ForEach(player.stocks, id: \.self) { stock in
                 HStack {
                     Spacer()
-                    Image(systemName: stock.type.image())
+                    Image(systemName: stock.type.image)
                         .frame(width: 20, height: 50)
-                        .foregroundColor(stock.type.color())
+                        .foregroundColor(stock.type.color)
                     Text("\(stock.amount)")
                     Spacer()
                 }

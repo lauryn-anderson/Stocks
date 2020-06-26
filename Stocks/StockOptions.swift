@@ -11,7 +11,7 @@ import SwiftUI
 enum StockOptions: DiceType, CaseIterable {
     case grain, oil, gold, silver, bonds, industrial
     
-    func title() -> String {
+    var description: String {
         switch self {
         case .grain:
             return "Grain"
@@ -28,7 +28,7 @@ enum StockOptions: DiceType, CaseIterable {
         }
     }
     
-    func image() -> String {
+    var image: String {
         switch self {
         case .grain:
             return "leaf.fill"
@@ -44,7 +44,7 @@ enum StockOptions: DiceType, CaseIterable {
             return "hammer.fill"
         }
     }
-    func color() -> Color {
+    var color: Color {
         switch self {
         case .grain:
             return .green
